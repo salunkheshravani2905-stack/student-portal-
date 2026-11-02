@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusFlow | Student Portal</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="loginScreen" class="login-wrap">
+  <div class="login-card">
+    <div class="brand-mark">C</div><p class="eyebrow">CAMPUSFLOW • INSTITUTION PORTAL</p>
+    <h1>Welcome back</h1><p class="muted">Sign in to continue to your campus workspace.</p>
+    <form id="loginForm">
+      <label>Email address</label><input id="email" type="email" value="student@campusflow.edu" required>
+      <label>Password</label><input id="password" type="password" value="campus123" required>
+      <label>Sign in as</label><select id="role"><option value="student">Student</option><option value="admin">Administrator</option><option value="faculty">Faculty</option></select>
+      <button class="primary full" type="submit">Sign in <span>→</span></button>
+    </form>
+    <div class="demo-note"><strong>Demo access</strong><br>Use any email and password, then choose Student, Faculty or Administrator.</div>
+    <p class="tiny muted center">Secure campus access · Help desk: support@campusflow.edu</p>
+  </div>
+  <div class="login-art"><div class="art-content"><span class="pill light">ONE CAMPUS. ONE WORKSPACE.</span><h2>Everything you need to<br>move forward.</h2><p>Learning, administration and campus life—connected in one place.</p><div class="art-stats"><div><b>24/7</b><small>Portal access</small></div><div><b>360°</b><small>Campus view</small></div><div><b>1</b><small>Connected hub</small></div></div></div></div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark small">C</div><div><b>CampusFlow</b><small>INSTITUTION PORTAL</small></div></div>
+    <div class="workspace-label">WORKSPACE</div><nav id="nav">
+      <button class="nav-item active" data-page="overview"><span>▦</span> Overview</button>
+      <button class="nav-item" data-page="courses"><span>▤</span> Courses</button>
+      <button class="nav-item" data-page="attendance"><span>◷</span> Attendance</button>
+      <button class="nav-item" data-page="assignments"><span>☑</span> Assignments</button>
+      <button class="nav-item" data-page="timetable"><span>▦</span> Timetable</button>
+      <button class="nav-item" data-page="results"><span>▥</span> Exams & Results</button>
+      <button class="nav-item" data-page="fees"><span>₹</span> Fees & Payments</button>
+      <button class="nav-item" data-page="notices"><span>▧</span> Notices</button>
+      <button class="nav-item" data-page="messages"><span>✉</span> Messages</button>
+      <button class="nav-item admin-only" data-page="management"><span>⚙</span> Administration</button>
+      <button class="nav-item" data-page="profile"><span>◉</span> My Profile</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">?</div><b>Need help?</b><p>Contact your campus support team.</p><a href="mailto:support@campusflow.edu">Get support ↗</a></div><button id="logout" class="logout">↪ &nbsp; Sign out</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button id="mobileMenu" class="mobile-menu">☰</button><div><span class="muted small-text">Workspace /</span> <b id="pageCrumb">Overview</b></div><div class="top-actions"><button class="icon-btn" id="quickNotice" title="Notifications">♧<i></i></button><div class="user-mini"><div class="avatar" id="topAvatar">AS</div><div><b id="topName">Aarav Sharma</b><small id="topRole">Student</small></div></div></div></header>
+    <section class="content" id="content"></section>
+    <footer>© 2026 CampusFlow · Student Information System <span>Privacy · Terms · IT Support</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
